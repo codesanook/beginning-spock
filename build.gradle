@@ -1,0 +1,20 @@
+group 'com.codesanook.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+//เพิ่ม plugin in groovy เข้าไป
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+//เพิ่ม lib ที่ต้องใช้ใน testCompile คือ groovy และ spock ดู version ให้ตรงกันด้วยนะครับ
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.4'
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+}
